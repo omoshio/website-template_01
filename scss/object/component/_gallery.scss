@@ -1,0 +1,33 @@
+/* gallery */
+.c-gallery__item {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #fff;
+}
+
+.c-gallery__item.cat-a {
+  background-color: red;
+}
+
+.c-gallery__item.cat-b {
+  background-color: blue;
+}
+
+.c-gallery__item.cat-c {
+  background-color: yellow;
+}
+
+.c-gallery__filter-btn {
+  color: #fff;
+  background-color: #666;
+  padding: 10px 30px;
+  min-width: 80px;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    opacity: 0.8;
+  }
+  &.is-active {
+    background-color: #000;
+  }
+}

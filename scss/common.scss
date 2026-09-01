@@ -1,0 +1,20 @@
+@use 'foundation/reset' as *;
+//@use 'foundation/variables' as *;
+//@use 'foundation/mixin' as *;
+
+@use 'layout/header' as *;
+@use 'layout/footer' as *;
+@use 'layout/main' as *;
+
+@use 'object/component/head' as *;
+@use 'object/component/button' as *;
+@use 'object/component/slider' as *;
+@use 'object/component/gallery' as *;
+@use 'object/component/card' as *;
+@use 'object/component/breadcrumb' as *;
+
+@use 'object/utility/utility' as *;
+
+@use 'project/front-page' as *;
+@use 'project/contact' as *;
+@use 'project/single' as *

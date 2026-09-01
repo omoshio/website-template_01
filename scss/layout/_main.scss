@@ -1,0 +1,9 @@
+.l-container{
+    width: min(100%, 1260px);
+    box-sizing: border-box;
+    margin-inline: auto;
+}
+.l-section {
+    padding-block: clamp(50px, 10vw, 100px);
+    padding-inline: clamp(20px, 6vw, 60px);
+}

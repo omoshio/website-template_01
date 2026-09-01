@@ -1,0 +1,22 @@
+.c-head {
+    &1 {
+        font-size: 32px;
+    }
+    &2 {
+        font-size: 28px;
+    }
+    &3 {
+        font-size: 22px;
+    }
+}
+.c-section-title {
+    text-align: center;
+    margin-bottom: clamp(25px, 5vw, 50px);
+    &__ja {
+        font-size: 28px;
+        font-weight: bold;
+    }
+    &__en {
+        font-size: 18px;
+    }
+}

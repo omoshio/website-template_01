@@ -1,0 +1,72 @@
+.c-menu-btn {
+    position: relative;
+    width: 60px;
+    height: 44px;
+    top: 20px;
+    span {
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: #333;
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+        border-radius: 2px;
+        &:nth-of-type(2) {
+            top: -20px
+        }
+        &:nth-of-type(3) {
+            top: 20px
+        }
+    }
+}
+
+.c-header-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #454545;
+    padding: 12px 50px;
+    font-size: 20px;
+    transition: all 0.3s;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.c-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #454545;
+    padding: 12px 50px;
+    font-size: 20px;
+    transition: all 0.3s;
+    margin-top: clamp(15px, 3vw, 30px );
+    width: min(100%, 300px);
+    margin-inline: auto; 
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.c-contact-btn {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(100%, 400px);
+    padding-block: 1em; 
+    border: 2px solid #333;
+    border-radius: 50px;
+    margin-inline: auto;
+    margin-top: clamp(30px, 6vw, 60px);
+    transition: all .3s;
+    &:hover {
+        color: #fff;
+        background-color: #333;
+    }
+}

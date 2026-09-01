@@ -1,0 +1,249 @@
+@use "sass:math";
+@use "sass:map";
+
+//---------------------------------------------------------------------------------------
+// mixin
+//---------------------------------------------------------------------------------------
+@mixin mq($breakpoint: sp) {
+  @media screen and (map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// breakpoint
+$bp_sp: 767px;
+$bp_pc: 768px;
+
+$breakpoints: (
+  pc: "min-width:#{$bp_pc}",
+  sp: "max-width:#{$bp_sp}",
+);
+
+//---------------------------------------------------------------------------------------
+// root
+//---------------------------------------------------------------------------------------
+:root {
+  --gothic: YuGothic,'Yu Gothic',sans-serif;
+
+  --serif: YuMincho, "Yu Mincho", 游明朝, "Times New Roman",
+    "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3",
+    "Sawarabi Mincho", "ＭＳ Ｐ明朝", "MS PMincho",
+    "MS 明朝", serif;
+}
+
+//---------------------------------------------------------------------------------------
+// フォント
+//---------------------------------------------------------------------------------------
+.--gothic {
+  font-family: YuGothic,'Yu Gothic',sans-serif !important;
+}
+
+.--mincho {
+  font-family: YuMincho, "Yu Mincho", 游明朝, "Times New Roman",
+  "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3",
+  "Sawarabi Mincho", "ＭＳ Ｐ明朝", "MS PMincho",
+  "MS 明朝", serif !important;
+}
+
+/* 特殊フォント */
+@font-face {
+  font-family: 'Bangla MN';
+  src:
+    url('../font/BanglaMN.woff') format('woff'),
+    url('../font/BanglaMN.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.--banglaMN {
+  font-family: 'Bangla MN', serif;
+  font-weight: normal;
+}
+
+//---------------------------------------------------------------------------------------
+// function
+//---------------------------------------------------------------------------------------
+
+// min(px, vw)
+@function vw($value) {
+  @if $value == 0 {
+    @return 0;
+  }
+
+  @return min(
+    #{$value}px,
+    #{math.div($value, 750) * 100}vw
+  );
+}
+
+// negative
+@function vw-n($value) {
+  @if $value == 0 {
+    @return 0;
+  }
+
+  @return max(
+    -#{$value}px,
+    -#{math.div($value, 750) * 100}vw
+  );
+}
+
+//---------------------------------------------------------------------------------------
+// utility
+//---------------------------------------------------------------------------------------
+
+// margin-top
+@for $i from 0 through 30 {
+  $value: $i * 5;
+
+  .u-mt#{$value} {
+    margin-top: vw($value) !important;
+  }
+}
+
+// margin-bottom
+@for $i from 0 through 30 {
+  $value: $i * 5;
+
+  .u-mb#{$value} {
+    margin-bottom: vw($value) !important;
+  }
+}
+
+// margin-left
+@for $i from 0 through 10 {
+  $value: $i * 5;
+
+  .u-ml#{$value} {
+    margin-left: vw($value) !important;
+  }
+}
+
+// margin-right
+@for $i from 0 through 10 {
+  $value: $i * 5;
+
+  .u-mr#{$value} {
+    margin-right: vw($value) !important;
+  }
+}
+
+// padding-top
+@for $i from 0 through 30 {
+  $value: $i * 5;
+
+  .u-pt#{$value} {
+    padding-top: vw($value) !important;
+  }
+}
+
+// padding-bottom
+@for $i from 0 through 30 {
+  $value: $i * 5;
+
+  .u-pb#{$value} {
+    padding-bottom: vw($value) !important;
+  }
+}
+
+// padding-left
+@for $i from 0 through 10 {
+  $value: $i * 5;
+
+  .u-pl#{$value} {
+    padding-left: vw($value) !important;
+  }
+}
+
+// padding-right
+@for $i from 0 through 10 {
+  $value: $i * 5;
+
+  .u-pr#{$value} {
+    padding-right: vw($value) !important;
+  }
+}
+
+// font-size
+@for $fsz from 15 through 60 {
+  .u-fsz--#{$fsz} {
+    font-size: vw($fsz) !important;
+  }
+}
+
+// line-height
+$lh: 100;
+
+@while $lh < 201 {
+  .u-lh--#{$lh} {
+    line-height: math.div($lh, 100) !important;
+  }
+
+  $lh: $lh + 5;
+}
+
+// font-weight
+.u-normal {
+  font-weight: normal !important;
+}
+
+.u-bold {
+  font-weight: bold !important;
+}
+
+// responsive none
+@include mq(pc) {
+  .pc_none {
+    display: none !important;
+  }
+}
+
+@include mq(sp) {
+  .sp_none {
+    display: none !important;
+  }
+}
+
+// text-align
+.u-left {
+  text-align: left !important;
+}
+
+.u-center {
+  text-align: center !important;
+}
+
+.u-right {
+  text-align: right !important;
+}
+
+// font-family
+.u-gothic {
+  font-family: var(--gothic) !important;
+}
+
+.u-serif {
+  font-family: var(--serif) !important;
+}
+
+// display
+.u-block {
+  display: block !important;
+}
+
+.u-inline-block {
+  display: inline-block !important;
+}
+
+.u-inline {
+  display: inline !important;
+}
+
+.u-flex {
+  display: flex !important;
+}
+
+//　background-color
+.u-bg--white {
+  background-color: #fff !important;
+}

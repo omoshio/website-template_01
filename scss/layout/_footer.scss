@@ -1,0 +1,26 @@
+.l-footer {
+    color: #fff;
+    background-color: #454545;
+    padding-inline: 20px;
+    padding-top: 50px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        font-size: 32px;
+    }
+    &__nav {
+        width: 30%;
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 40px;
+        }
+    }
+    &__copyright {
+        color: #fff;
+        text-align: center;
+        padding-block: 60px 20px;
+    }
+}

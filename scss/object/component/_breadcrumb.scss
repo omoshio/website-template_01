@@ -1,0 +1,9 @@
+.c-breadcrumb {
+    &__wrap {
+        width: min(100%, 1260px);
+        box-sizing: border-box;
+        margin-inline: auto;
+        padding-block: 1em;
+        padding-inline: clamp(20px, 6vw, 60px);
+    }
+}
