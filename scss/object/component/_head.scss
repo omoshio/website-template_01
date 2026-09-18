@@ -1,6 +1,9 @@
 .c-head {
     &1 {
         font-size: 32px;
+        @media (max-width: 767px) {
+            font-size: clamp(20px, 3.2vw, 32px);
+        }
     }
     &2 {
         font-size: 28px;

@@ -4,6 +4,14 @@
 
 
 /* デフォルト設定 */
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: clamp(60px, 10vw, 100px);
+}
+
 p,h2,h3 {
     color: #333;
 }

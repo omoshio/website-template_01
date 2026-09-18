@@ -17,7 +17,7 @@
                 サンプル株式会社
             </a>
         </h1>
-        <nav class="l-header__nav sp_none">
+        <nav class="l-header__nav">
             <ul class="l-header__nav-list">
                 <li class="l-header__nav-item">
                     <a href="#ac_about">ABOUT</a>

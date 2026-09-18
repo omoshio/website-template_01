@@ -8,15 +8,33 @@
                 暮らしと未来を<br>
                 もっと豊かに。
             </p>
-            <p class="p-fv__text">
+            <p class="p-fv__txt">
                 〇〇株式会社は、地域に根ざしたサービスを通じて<br>
                 お客様の暮らしをサポートします。
             </p>
         </div>
     </section>
 
+    <!-- FV_スライダー -->
+    <div class="p-fv-slider">
+        <div class="p-fv-slider__slide" style="background-image: url(<?php tempurl(); ?>/images/fv_slide_01.jpg);">
+            <div class="p-fv-slider__content">
+                <p class="p-fv-slider__head">暮らしと未来を<br>もっと豊かに。</p>
+                <p class="p-fv-slider__txt">〇〇株式会社は、地域に根ざしたサービスを通じて<br>
+                お客様の暮らしをサポートします。</p>
+            </div>
+        </div>
+        <div class="p-fv-slider__slide" style="background-image: url(<?php tempurl(); ?>/images/fv_slide_02.jpg);">
+            <div class="p-fv-slider__content">
+                <p class="p-fv-slider__head">暮らしと未来を<br>もっと豊かに。</p>
+                <p class="p-fv-slider__txt">〇〇株式会社は、地域に根ざしたサービスを通じて<br>
+                お客様の暮らしをサポートします。</p>
+            </div>
+        </div>
+    </div>
+
     <!-- About -->
-    <section id="ac_about" class="p-about l-section">
+    <section id="ac_about" class="p-about l-section js-fadein">
         <div class="l-container">
             <div class="c-section-title">
                 <h2 class="c-section-title__ja">私たちについて</h2>
@@ -48,7 +66,7 @@
     </section>
 
     <!-- Service -->
-    <section id="ac_service" class="p-service l-section">
+    <section id="ac_service" class="p-service l-section js-fadein">
         <div class="l-container">
             <div class="c-section-title">
                 <h2 class="c-section-title__ja">サービス</h2>
@@ -117,7 +135,7 @@
     </section> 
 
     <!-- Works -->
-    <section id="ac_works" class="p-works l-section">
+    <section id="ac_works" class="p-works l-section js-fadein">
         <div class="l-container">
 
             <div class="c-section-title">
@@ -194,7 +212,7 @@
     </section>
 
     <!-- News -->
-    <section id="ac_news" class="p-news l-section">
+    <section id="ac_news" class="p-news l-section js-fadein">
         <div class="l-container">
             <div class="c-section-title">
                 <h2 class="c-section-title__ja">お知らせ</h2>
@@ -229,7 +247,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="ac_contact" class="p-contact l-section">
+    <section id="ac_contact" class="p-contact l-section js-fadein">
         <div class="l-container">
             <div class="c-section-title">
                 <h2 class="c-section-title__ja">お問い合わせ</h2>
@@ -238,7 +256,7 @@
             <p class="p-contact__lead">
                 ご相談・お問い合わせはこちらからお気軽にご連絡ください。
             </p>
-            <a href="#" class="c-contact-btn">
+            <a href="<? homeurl(); ?>/contact" class="c-contact-btn">
                 お問い合わせ
             </a>
         </div>

@@ -1,6 +1,6 @@
 .js-slider_01 {
   .slick-slide {
-    padding-inline: 20px;
+    padding-inline: clamp(10px, 2vw, 20px);
   }
 
   /* dotsアニメーション */
@@ -15,7 +15,10 @@
         width: 3rem;
         height: 3rem;
         position: relative;
-        margin: 0 8px
+        margin: 0 8px;
+        @media (max-width: 767px) {
+            margin: 0;
+        }
     }
 
     .slide-dots li .slide-dot {
@@ -103,10 +106,14 @@
             line-height: 1;
             color: #333;
         }
+        @media (max-width: 767px) {
+            width: 30px;
+            height: 30px;
+        }
     }
     // 左
     .slick-prev {
-        left: -100px;
+        left: 9.45%;
         &::before {
             content: "";
             width: 25px;
@@ -117,14 +124,19 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            left: 10px;
+            left: 5px;
             right: 0px;
             margin: auto;
+            @media (max-width: 767px) {
+                border-width: 2px;
+                width: 10px;
+                height: 10px;
+            }
         }
     }
     // 右
     .slick-next {
-        right: -100px;
+        right: 9.45%;
         &::before {
             content: "";
             width: 25px;
@@ -136,8 +148,13 @@
             top: 0;
             bottom: 0;
             left: 0;
-            right: 10px;
+            right: 5px;
             margin: auto;
+            @media (max-width: 767px) {
+                border-width: 2px;
+                width: 10px;
+                height: 10px;
+            }
         }
     }
 }

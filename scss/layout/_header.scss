@@ -1,6 +1,6 @@
 .l-header {
     height: clamp(60px, 10vw, 100px);
-    box-shadow: 1px 1px 3px rgba(0 0 0 /0.1);
+    box-shadow: 2px 2px 8px 3px rgba(0 0 0 /0.1);
     position: sticky;
     background-color: #fff;
     top: 0;
@@ -12,14 +12,44 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 767px) {
+            padding-inline: 10px;
+        }
     }
     &__nav {
+        @media (max-width: 767px) {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px);
+            position: fixed;
+            top: clamp(60px, 10vw, 100px);
+            left: 0;
+            width: 100%;
+            transition: all .3s;
+            height: 100%;
+        }
+        &.is-active {
+            @media (max-width: 767px) {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
         &-list {
             display: flex;
+            @media (max-width: 767px) {
+                background-color: #fff;
+                flex-direction: column;
+
+            }
         }
         &-item {
             padding-inline: 1em;
             font-size: 20px;
+            @media (max-width: 767px) {
+                padding: 1em;
+                border-bottom: 1px solid #ddd;
+            }
         }
     }
 }

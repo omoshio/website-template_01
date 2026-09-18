@@ -1,11 +1,12 @@
 .c-menu-btn {
     position: relative;
-    width: 60px;
-    height: 44px;
-    top: 20px;
+    width: 45px;
+    height: 45px;
+    top: 24px;
+    cursor: pointer;
     span {
         display: block;
-        width: 60px;
+        width: 45px;
         height: 4px;
         background-color: #333;
         position: absolute;
@@ -13,10 +14,10 @@
         cursor: pointer;
         border-radius: 2px;
         &:nth-of-type(2) {
-            top: -20px
+            top: -15px
         }
         &:nth-of-type(3) {
-            top: 20px
+            top: 15px
         }
     }
 }
@@ -44,7 +45,7 @@
     padding: 12px 50px;
     font-size: 20px;
     transition: all 0.3s;
-    margin-top: clamp(15px, 3vw, 30px );
+    margin-top: 30px;
     width: min(100%, 300px);
     margin-inline: auto; 
     &:hover {

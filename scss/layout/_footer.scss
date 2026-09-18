@@ -2,13 +2,21 @@
     color: #fff;
     background-color: #454545;
     padding-inline: 20px;
-    padding-top: 50px;
+    padding-top: clamp(30px, 4vw, 40px);
     &__inner {
         display: flex;
         justify-content: space-between;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            gap: 50px;
+        }
     }
     &__logo {
         font-size: 32px;
+    }
+    &__address {
+        color: #fff;
+        font-size: 15px;
     }
     &__nav {
         width: 30%;
@@ -21,6 +29,6 @@
     &__copyright {
         color: #fff;
         text-align: center;
-        padding-block: 60px 20px;
+        padding-block: 60px clamp(10px, 2vw, 20px);
     }
 }

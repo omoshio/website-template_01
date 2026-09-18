@@ -1,0 +1,18 @@
+.js-fadein {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: .8s;
+}
+.js-fadein.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.js-fadein-top {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: all 600ms;
+}
+.js-fadein-top.is-active {
+    opacity: 1;
+    transform: translate(0, 0);
+}

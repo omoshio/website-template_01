@@ -7,11 +7,13 @@
 @use 'layout/main' as *;
 
 @use 'object/component/head' as *;
-@use 'object/component/button' as *;
+@use 'object/component/btn' as *;
 @use 'object/component/slider' as *;
 @use 'object/component/gallery' as *;
 @use 'object/component/card' as *;
 @use 'object/component/breadcrumb' as *;
+@use 'object/component/fadein' as *;
+@use 'object/component/fv_slider' as *;
 
 @use 'object/utility/utility' as *;
 

@@ -1,0 +1,162 @@
+.p-fv-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &__slide {
+        position: relative;
+        min-height: 700px !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        // 背景画像を少し暗くする場合
+        &::before {
+            position: absolute;
+            inset: 0;
+            content: "";
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__head {
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: bold;
+    }
+    &__txt {
+        font-size: clamp(18px, 2.2vw, 22px);
+    }
+    &__inner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: min(100%, 1260px);
+        min-height: 700px;
+        margin-inline: auto;
+        padding-inline: clamp(20px, 6vw, 60px);
+    }
+
+    &__title {
+        margin: 0;
+        font-size: clamp(32px, 4vw, 56px);
+        font-weight: 700;
+        line-height: 1.4;
+        color: #fff;
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: clamp(14px, 1.5vw, 18px);
+        line-height: 1.8;
+        color: #fff;
+    }
+
+    &__button {
+        margin-top: 30px;
+    }
+
+    // Slickの矢印
+    .slick-arrow {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        transform: translateY(-50%);
+        border: 1px solid #fff;
+        border-radius: 50%;
+        background: transparent;
+        cursor: pointer;
+
+        &::before {
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+
+    .slick-prev {
+        left: 30px;
+    }
+
+    .slick-next {
+        right: 30px;
+    }
+
+    // Slickのドット
+    .slick-dots {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        display: flex;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        transform: translateX(-50%);
+
+        li {
+            width: auto;
+            height: auto;
+            margin: 0;
+
+            button {
+                width: 10px;
+                height: 10px;
+                padding: 0;
+                border: 0;
+                border-radius: 50%;
+                background: #fff;
+                opacity: 0.5;
+                font-size: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .p-fv-slider {
+
+        &__slide {
+            min-height: 600px;
+        }
+
+        &__inner {
+            min-height: 600px;
+            padding-inline: 20px;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+
+        .slick-arrow {
+            display: none !important;
+        }
+
+        .slick-dots {
+            bottom: 20px;
+        }
+    }
+}

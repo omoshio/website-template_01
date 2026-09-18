@@ -6,7 +6,7 @@
     background-size: cover;
     height: 48vw;
     @media (max-width: 767px) {
-        height: 100vh;
+        height: calc(100vh - clamp(60px, 10vw, 100px));
     }
     &::before {
         content: "";
@@ -19,6 +19,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @media (max-width: 767px) {
+            width: 80%;
+        }
     }
     &__catch {
         color: #fff;
@@ -26,10 +29,11 @@
         font-weight: bold;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
     }
-    &__text {
+    &__txt {
         color: #fff;
         font-size: clamp(20px, 2.8vw, 28px);
         text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+        margin-top: 20px;
     }
 }
 
@@ -38,9 +42,18 @@
         display: flex;
         gap: 50px;
         justify-content: center;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            gap: 0;
+        }
     }
     &__body {
         margin-top: 20px;
+    }
+    &__image {
+        img {
+            vertical-align: bottom;
+        }
     }
 }
 
@@ -51,6 +64,9 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
+        @media (max-width: 767px) {
+            grid-template-columns: repeat(1, 1fr); 
+        }
     }
 }
 
@@ -60,6 +76,9 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
+        @media (max-width: 767px) {
+            grid-template-columns: repeat(1, 1fr); 
+        }
     }
 }
 
@@ -74,6 +93,9 @@
             display: block;
             font-weight: bold;
             padding: 1.5em;
+            @media (max-width: 767px) {
+                padding-inline: 0.5em;
+            }
         }
         &:first-of-type {
             border-top: 1px solid #ccc;
@@ -81,11 +103,14 @@
     }
     &__link {
         display: block;
-        margin-left: 60px;
         flex-grow: 1;
         padding: 1.5em;
         text-decoration: underline;
         transition: all .3s;
+        @media (max-width: 767px) {
+            margin-left: 10px;
+            padding-inline: 1em;
+        }
         &:hover {
             text-decoration: none;
         }
