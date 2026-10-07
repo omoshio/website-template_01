@@ -88,3 +88,6 @@ function website_template_assets() {
     );
 }
 add_action('wp_enqueue_scripts', 'website_template_assets');
+
+// titleタグをWordPressに管理させる
+add_theme_support('title-tag');

@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>サンプル株式会社</title>
-    <meta name="description" content="サンプル株式会社の公式サイトです。">
     <?php wp_head(); ?>
 </head>
 
