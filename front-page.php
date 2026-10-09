@@ -1,6 +1,11 @@
 <?php get_header(); ?>
 
 <main>
+    <!-- My Slider Revolution-->
+    <section class="p-msr-fv">
+        <?php echo do_shortcode('[my_slider id="73"]'); ?>
+    </section>
+
     <!-- FV -->
     <section class="p-fv">
         <div class="p-fv__inner">
