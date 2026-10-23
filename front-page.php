@@ -38,6 +38,37 @@
         </div>
     </div>
 
+    <!-- Video slider-->
+    <section class="video-slider js-video-slider">
+        <div class="item video">
+            <video class="slide-video slide-media" loop muted controls preload="metadata" poster="<?php tempurl(); ?>/images/thum_01.jpg">
+                <source src="<?php tempurl(); ?>/images/movie_01.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="item video">
+            <video class="slide-video slide-media" loop muted controls preload="metadata" poster="<?php tempurl(); ?>/images/thum_02.jpg">
+                <source src="<?php tempurl(); ?>/images/movie_02.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="item video">
+            <video class="slide-video slide-media" loop muted controls preload="metadata" poster="<?php tempurl(); ?>/images/thum_03.jpg">
+                <source src="<?php tempurl(); ?>/images/movie_03.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </section>
+
+    <section class="video-slider js-video-slider">
+        <div class="item youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/usNsCeOV4GM?enablejsapi=1&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="item youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/apBWI6xrbLY?enablejsapi=1&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="item youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qN5zw04WxCc?enablejsapi=1&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
     <!-- About -->
     <section id="ac_about" class="p-about l-section js-fadein">
         <div class="l-container">
@@ -269,4 +300,5 @@
 </main>
 
 <?php get_footer(); ?>
+
 

@@ -86,6 +86,16 @@ function website_template_assets() {
         filemtime(get_template_directory() . '/js/common.js'),
         true
     );
+
+    // 動画スライダー用JS
+    wp_enqueue_script(
+        'slider-video-js',
+        get_template_directory_uri() . '/js/video-slider.js',
+        array('jquery', 'slick'),
+        filemtime(get_template_directory() . '/js/video-slider.js'),
+        true
+    );
+
 }
 add_action('wp_enqueue_scripts', 'website_template_assets');
 
